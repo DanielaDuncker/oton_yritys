@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otto Ohjelmoija</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <strong>Otto Ohjelmoija</strong>
+        </div>
+
+        <div class="image">
+            <img src="otto_ohjelmoija_logo.jpg" alt="otto_ohjelmoija_logo">
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Etusivu</a>
+            <a href="yhteystiedot.html">Yhteystiedot</a>
+        </div>
+
+        <div class="main">
+            <article>
+                <h2>
+                    Tässä on esimerkkejä ohjelmoinnista mitä on mahdollista tehdä:
+                </h2>
+                <p>
+                    Tässä on <a href="https://public.bc.fi/katta/kortit/">linkki</a> ventti peliin joka on tehty
+                    käyttämällä javascriptiä.
+                </p>
+                <p>
+                    Ja tässä on <a href="https://danieladuncker.github.io/lasku_juttu/">linkki</a> lasku ohjelmaan
+                    myös javascriptillä.
+                </p>
+            </article>
+
+            <div class="script">
+                <h2>
+                    Tässä voit itse testata koodaamista hieman!
+                </h2>
+                <p id="kuva">
+                    <img class="robotti1" src="perus.png" alt="robotti kädet alhaalla">
+                </p>
+                <h3 class="robotti2">
+                    Laita robotti vilkuttamaan!
+                </h3>
+                <p>
+                    Kirjoita tekstikenttään ohjelmakoodi robotto.wave() ja katso mitä tapahtuu!
+                </p>
+                <form name="txtKentta">
+                    <input type="text" name="teksti" title="Teksin syöttökenttä">
+                    <br />
+                    <br />
+                    <input type="button" value="Suorita" onclick="Liikuta()">
+                    <input type="button" value="Tyhjennä" onclick="Tyhja()">
+                </form>
+                <p id="alue"></p>
+
+                <script>
+                    function Liikuta() {
+                        var teksti = document.forms["txtKentta"]["teksti"].value;
+                        switch (teksti != "robotto.wave();") {
+                            case true:
+                                window.alert("Syntax error!");
+                                break;
+                            default:
+                                text = '<img class="nature" src="perus.png">' + '<img class="nature" src="heiluu.png">'
+                                document.getElementById("alue").innerHTML = text;
+                                w3.slideshow(".nature");
+                        }
+                    }
+                    function Tyhja() {
+                        document.getElementById("alue").innerHTML = " ";
+                        document.forms["txtKentta"]["teksti"].value = "";
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <hr>
+                <!-- mitä nyt tähä footeriin sit ikin tuleekaan --> &copy; otson yritys
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

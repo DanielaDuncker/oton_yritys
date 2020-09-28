@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 0px 50px 0px 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+}
+
+.grid-container {
+    background-color: #fff4d9;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 17px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+body {
+    background-color: rgb(74, 180, 122);
+}
+
+.grid-container>.image {
+    padding: 0px;
+    background-color: transparent;
+}
+
+.header {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(20, 24, 23);
+    border-bottom: 5px double rgb(32, 179, 147);
+}
+
+
+/* Selvitä miten saat logon jotenki paremmin johonkin parempaan kohtaan */
+.image {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 10px;
+    margin: 10px;
+}
+
+img {
+    border-radius: 50px;
+}
+
+.nav {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.main {
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+.robotti1 {
+    height: 200px;
+}
+
+article {
+    padding: 10px;
+}
+
+
+.footer {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    padding-top: 50px;
+}
+
+hr {
+    color: cadetblue;
+    height: 5px;
+}
+
+a {
+    color: rgb(59, 191, 221);
+    font-size: 18px;
+    margin: 5px;
+}
+
+/* Yhteystidot sivun css */
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 0px 50px 0px 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 50px;
+}
+
+.grid-container2 {
+    background-color: #fff4d9;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 17px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+.header2{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(20, 24, 23);
+    border-bottom: 5px double rgb(32, 179, 147);
+}
+
+.nav2 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin-top: 10px;
+}
+
+.main2 {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 40px;
+}
