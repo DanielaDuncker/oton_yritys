@@ -64,21 +64,20 @@
 
                 <script>
                     function Liikuta() {
-                        var teksti = document.forms["txtKentta"]["teksti"].value;
-                        switch (teksti != "robotto.wave();") {
-                            case true:
-                                window.alert("Syntax error!");
-                                break;
-                            default:
-                                text = '<img class="nature" src="perus.png">' + '<img class="nature" src="heiluu.png">'
-                                document.getElementById("alue").innerHTML = text;
-                                w3.slideshow(".nature");
+                        {
+                            var komento = document.forms["lomake"]["t1"].value;
+                            var i = 0;
+                            if (komento == "robotto.wave();") {
+                                document.getElementById("nayta").innerHTML = "<center>" + "<img class='robo' src='perus.png' width=30%>" + "<img class='robo' src='heiluu.png' width=30%>" + "</center>";
+                                w3.slideshow(".robo", 1000);
+                            } else {
+                                document.getElementById("nayta").innerHTML = "Syntax error!!";
+                            }
                         }
-                    }
-                    function Tyhja() {
-                        document.getElementById("alue").innerHTML = " ";
-                        document.forms["txtKentta"]["teksti"].value = "";
-                    }
+                        function Tyhja() {
+                            document.forms["lomake"]["t1"].value = "";
+                            document.getElementById("nayta").innerHTML = "";
+                        }
                 </script>
             </div>
         </div>
