@@ -18,18 +18,18 @@
     text-align: center;
     padding-top: 30px;
     font-size: 17px;
-    margin-right: 10vw;
-    margin-left: 10vw;
+    margin-right: 18vw;
+    margin-left: 18vw;
 }
 
 body {
     background-color: rgb(74, 180, 122);
 }
 
-.grid-container>.image {
+/* .grid-container>.image {
     padding: 0px;
     background-color: transparent;
-}
+} */
 
 .header {
     grid-column: 2/4;
@@ -47,15 +47,15 @@ body {
 
 
 /* Selvitä miten saat logon jotenki paremmin johonkin parempaan kohtaan */
-.image {
+.logo {
     grid-column: 1/2;
     grid-row: 1/2;
     height: 10px;
     margin: 10px;
 }
 
-img {
-    border-radius: 50px;
+.robo {
+    border-radius: 20px;
 }
 
 .nav {
@@ -70,9 +70,6 @@ img {
     grid-row: 3/4;
 }
 
-.robotti1 {
-    height: 200px;
-}
 
 article {
     padding: 10px;
@@ -95,6 +92,8 @@ a {
     font-size: 18px;
     margin: 5px;
 }
+
+
 
 /* Yhteystidot sivun css */
 
@@ -144,4 +143,50 @@ a {
     justify-self: center;
     align-self: center;
     padding-bottom: 40px;
+}
+
+
+@media screen and (min-width: 736px)
+{
+ .grid-container{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'header header header'
+    'nav nav nav'
+    'image image image'
+    'main main main'
+    'main main main'
+    'footer footer footer';}
+}
+
+@media screen and (max-width: 736px)
+{
+    .grid-container{
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    .header{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 5px;
+        margin: 5px;
+    }
+    .main{
+        grid-column: 1 / 4;
+    }
+    .nav{
+        margin-top: 90px;
+        padding: 10px;
+        grid-column: 1 / 4;
+        background-color: #b3f3bc;
+    }
+    .footer{
+        font-size: 14px;
+    }
 }

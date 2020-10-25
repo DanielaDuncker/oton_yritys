@@ -16,7 +16,7 @@
             <strong>Otto Ohjelmoija</strong>
         </div>
 
-        <div class="image">
+        <div class="logo">
             <img src="otto_ohjelmoija_logo.jpg" alt="otto_ohjelmoija_logo">
         </div>
 
@@ -44,15 +44,19 @@
                 <h2>
                     Tässä voit itse testata koodaamista hieman!
                 </h2>
-                <p id="kuva">
-                    <img class="robotti1" src="perus.png" alt="robotti kädet alhaalla">
-                </p>
-                <h3 class="robotti2">
+
+                <p id="alue"></p>
+
+                <img class="robo" src="perus.png" width="70%">
+
+                <h3>
                     Laita robotti vilkuttamaan!
                 </h3>
+
                 <p>
-                    Kirjoita tekstikenttään ohjelmakoodi robotto.wave() ja katso mitä tapahtuu!
+                    Kirjoita tekstikenttään ohjelmakoodi robotto.wave(); ja katso mitä tapahtuu!
                 </p>
+
                 <form name="txtKentta">
                     <input type="text" name="teksti" title="Teksin syöttökenttä">
                     <br />
@@ -60,7 +64,6 @@
                     <input type="button" value="Suorita" onclick="Liikuta()">
                     <input type="button" value="Tyhjennä" onclick="Tyhja()">
                 </form>
-                <p id="alue"></p>
 
                 <script>
                     function Liikuta() {
@@ -68,15 +71,15 @@
                             var komento = document.forms["txtKentta"]["teksti"].value;
                             var i = 0;
                             if (komento == "robotto.wave();") {
-                                document.getElementById("nayta").innerHTML = "<center>" + "<img class='robo' src='perus.png' width=30%>" + "<img class='robo' src='heiluu.png' width=30%>" + "</center>";
+                                document.getElementById("alue").innerHTML = "<center>" + "<img class='robo' src='perus.png' width=70%>" + "<img class='robo' src='heiluu.png' width=70%>" + "</center>";
                                 w3.slideshow(".robo", 1000);
                             } else {
-                                document.getElementById("nayta").innerHTML = "Syntax error!!";
+                                document.getElementById("alue").innerHTML = "Syntax error!!";
                             }
                         }
                         function Tyhja() {
-                            document.forms["lomake"]["t1"].value = "";
-                            document.getElementById("nayta").innerHTML = "";
+                            document.forms["txtKentta"]["teksti"].value = "";
+                            document.getElementById("alue").innerHTML = "";
                         }
                     }
                 </script>
